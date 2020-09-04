@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <AssemblyName>pilotspeak</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Peachpie.AspNetCore.Web" Version="1.0.0-preview1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Raccoony.PilotSpeak\Raccoony.PilotSpeak.msbuildproj" />
+    </ItemGroup>
+
+</Project>
