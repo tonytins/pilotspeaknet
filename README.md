@@ -26,8 +26,7 @@ A live version of this project can be found @ https://drraccoon.me/pilot/
 ### Prerequisites
 
 * .NET Core 3.1 SDK
-
-## Authors
+* PeachPie extension for [Visual Studio](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vs) or [VS Code](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vscode) (Optional)
 
 ## Authors
 
