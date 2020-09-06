@@ -27,24 +27,21 @@
     <?php
     $jsonfile = file_get_contents("wordbank.json");
     $wordbank = json_decode($jsonfile, true);
-    $buzzword1 = Array('fuel loads','minimums','credit hours','ACARS','LAX terminal','KMSP terminal','ASRS','jump seat','release','sink rate','jump seat','bids','jet bridge','INOP equipment','crew meals','reserve trips','night recurrent','GoGo™ Inflight Wifi'); //BLUE
-    $location_noun1 = Array('the Airbus','the CRJ-900','the CRJ-200','salt lake overnight','the 737','the 737 MAX','our Hotel Van','my check ride'); //GREY
-    $time = Array('last night','during my last leg','during my last trip','last month','while based in NY','during IOE','after IOE','during captain upgrade','@ Oshkosh Airventure','@ JetBlue'); //GREEN
-    $descriptor = Array('really nuts','over-credited','not in-line with our mission statement','against the contract','against ALPA regulations','in question by my chief pilot','questionable, at best','a bit sketchy','totally not legal','super f**ked up','enough to break guarantee'); //YELLOW
 
-    $pick1 = $buzzword1[array_rand($buzzword1)];
-    $pick2 = $location_noun1[array_rand($location_noun1)];
-    $pick3 = $time[array_rand($time)];
-    $pick4 = $descriptor[array_rand($descriptor)];
-    $line = "The " . $pick1 . " on " . $pick2 . " " . $pick3 . " was " . $pick4;
+    $buzzword = $wordbank["buzzword"][array_rand($wordbank["buzzword"])]; // Blue
+    $location = $wordbank["location"][array_rand($wordbank["location"])]; // Grey
+    $time = $wordbank["time"][array_rand($wordbank["time"])]; // Green
+    $descriptor = $wordbank["descriptor"][array_rand($wordbank["descriptor"])]; // Yellow
+
+    $line = "The " . $buzzword . " on " . $location . " " . $time . " was " . $descriptor;
     $lineurl = str_replace(' ', '%20', $line);
     ?>
 
     <div class="container">
       <div class="card">
         <div class="card-body lol1" style="text-align: center; font-size: 150%;">
-            <p class="fonty">The <span class="badge badge-primary" style="transform: rotate(2deg); box-shadow: 2px 1px 5px grey;"><?php echo $pick1; ?></span> on <span class="badge badge-secondary" style="transform: rotate(-1deg);box-shadow: 2px 1px 5px grey;"><?php echo $pick2; ?></span> <span class="badge badge-success" style="transform: rotate(1deg);box-shadow: 2px 1px 5px grey;"><?php echo $pick3; ?></span>
-           was <span class="badge badge-warning" style="transform: rotate(1deg);box-shadow: 2px 1px 5px grey;"><?php echo $pick4; ?>.</span></p>
+            <p class="fonty">The <span class="badge badge-primary" style="transform: rotate(2deg); box-shadow: 2px 1px 5px grey;"><?php echo $buzzword; ?></span> on <span class="badge badge-secondary" style="transform: rotate(-1deg);box-shadow: 2px 1px 5px grey;"><?php echo $location; ?></span> <span class="badge badge-success" style="transform: rotate(1deg);box-shadow: 2px 1px 5px grey;"><?php echo $time; ?></span>
+           was <span class="badge badge-warning" style="transform: rotate(1deg);box-shadow: 2px 1px 5px grey;"><?php echo $descriptor; ?>.</span></p>
          </div>
          <div class="btn-group" role="group" aria-label="Basic example">
           <button type="button" class="btn btn-primary" onclick="copyText()" id="peep"><i class="fas fa-copy"></i> Copy</button>
@@ -68,7 +65,7 @@
         <center><p>Accidentally made in <i class="fab fa-php"></i>
         <br /><small>Accidentally ported to <i class="fab fa-microsoft"></i> .NET by Tonytins</small></center></p>
      </div>
-     <input type="text" value="The <?php echo $pick1; ?> on <?php echo $pick2; ?> <?php echo $pick3; ?> was <?php echo $pick4; ?>." id="textInput" style="opacity: 0;">
+     <input type="text" value="The <?php echo $buzzword; ?> on <?php echo $location; ?> <?php echo $time; ?> was <?php echo $descriptor; ?>." id="textInput" style="opacity: 0;">
      <script>
      function copyText(){
        navigator.vibrate(500);
