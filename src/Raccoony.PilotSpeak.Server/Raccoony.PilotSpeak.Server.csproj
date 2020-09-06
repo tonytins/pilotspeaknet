@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Raccoony.PilotSpeak\Raccoony.PilotSpeak.msbuildproj" />
+        <ProjectReference Include="..\Raccoony.PilotSpeak\Raccoony.PilotSpeak.msbuildproj" />
     </ItemGroup>
 
 </Project>

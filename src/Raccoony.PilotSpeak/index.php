@@ -19,12 +19,14 @@
   </style>
   <body>
     <div class="container">
-    <h1 class="display-4">Pilot Speak v2.5</h1>
+    <h1 class="display-4">Pilot Speak</h1>
     <h4 class="fancyfont">What is "Pilot Speak Generator"?</h4>
     <p class="fancyfont">Have you ever found yourself with a group of pilots and wanted something to contribute to the conversation? Well now you can! This interactive tool will allow you to easily generate (potentially) relevant topics to spark discussion!</p>
     </div>
 
     <?php
+    $jsonfile = file_get_contents("wordbank.json");
+    $wordbank = json_decode($jsonfile, true);
     $buzzword1 = Array('fuel loads','minimums','credit hours','ACARS','LAX terminal','KMSP terminal','ASRS','jump seat','release','sink rate','jump seat','bids','jet bridge','INOP equipment','crew meals','reserve trips','night recurrent','GoGo™ Inflight Wifi'); //BLUE
     $location_noun1 = Array('the Airbus','the CRJ-900','the CRJ-200','salt lake overnight','the 737','the 737 MAX','our Hotel Van','my check ride'); //GREY
     $time = Array('last night','during my last leg','during my last trip','last month','while based in NY','during IOE','after IOE','during captain upgrade','@ Oshkosh Airventure','@ JetBlue'); //GREEN
