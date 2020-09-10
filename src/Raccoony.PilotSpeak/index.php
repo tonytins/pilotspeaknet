@@ -26,12 +26,12 @@
 
     <?php
     $jsonfile = file_get_contents("wordbank.json");
-    $wordbank = json_decode($jsonfile, true);
+    $getjson = json_decode($jsonfile, true);
 
-    $buzzword = $wordbank["buzzword"][array_rand($wordbank["buzzword"])]; // Blue
-    $location = $wordbank["location"][array_rand($wordbank["location"])]; // Grey
-    $time = $wordbank["time"][array_rand($wordbank["time"])]; // Green
-    $descriptor = $wordbank["descriptor"][array_rand($wordbank["descriptor"])]; // Yellow
+    $buzzword = $getjson["buzzword"][array_rand($getjson["buzzword"])]; // Blue
+    $location = $getjson["location"][array_rand($getjson["location"])]; // Grey
+    $time = $getjson["time"][array_rand($getjson["time"])]; // Green
+    $descriptor = $getjson["descriptor"][array_rand($getjson["descriptor"])]; // Yellow
 
     $line = "The " . $buzzword . " on " . $location . " " . $time . " was " . $descriptor;
     $lineurl = str_replace(' ', '%20', $line);
@@ -61,7 +61,7 @@
         $wordbank = count($descriptor) + count($time) + count($location_noun1) + count($buzzword1);
         $wordbankformatted = number_format($wordbank);?>
       <p><small>So far, <mark><strong><?php echo $yes ?></strong></mark> phrases were generated using this app. Application made in love by <a href="http://t.me/drraccoon/">@DrRaccoon</a> for <a href="http://t.me/vulan/">@Vulan</a> and all my other aviation friends. Like what I make? <a href="https://ko-fi.com/drraccoon"><i class="fad fa-mug-hot"></i> Buy me a coffee</a>!<br>
-        There are currenly <mark><? echo $wordbankformatted; ?></mark> words, making <mark><? echo $totalcomboformatted; ?></mark> total combinations. Want to contribute more phases and words? Join this <a href="https://t.me/PilotSpeak">telegram group</a>. Last updated: <mark><? echo "".date("F d Y.",filemtime("index.php")); ?></mark></small></p>
+        There are currenly <mark><? echo $wordbankformatted; ?></mark> words, making <mark><? echo $totalcomboformatted; ?></mark> total combinations. Want to contribute more phases and words? Join this <a href="https://t.me/PilotSpeak">telegram group</a>. Last updated: <mark><? echo "".date("F d Y.",filemtime("wordbank.json")); ?></mark></small></p>
         <center><p>Accidentally made in <i class="fab fa-php"></i>
         <br /><small>Accidentally ported to <i class="fab fa-microsoft"></i> .NET by Tonytins</small></center></p>
      </div>

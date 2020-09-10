@@ -1,6 +1,8 @@
 # PilotSpeak.NET
 
-[![License: GPL v2](https://img.shields.io/badge/License-GPLv2-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![GitHub license](https://img.shields.io/github/license/tonytins/pilotspeaknet)](https://github.com/tonytins/pilotspeaknet/blob/master/LICENSE)
+
+Created by Shawn McHenry, Pilot Speak is a phrase generator is for talking like a pilot. This was ported over to .NET using [PeachPie](https://www.peachpie.io/) as an experiment. It worked 
 
 ## Build Status
 
