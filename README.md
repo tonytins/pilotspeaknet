@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/github/license/tonytins/pilotspeaknet)](https://github.com/tonytins/pilotspeaknet/blob/master/LICENSE)
 
-Created by Shawn McHenry, Pilot Speak is a phrase generator is for talking like a pilot. This was ported over to .NET using [PeachPie](https://www.peachpie.io/) as an experiment. It worked 
+Created by Shawn McHenry, Pilot Speak is a phrase generator for talking like a pilot. This was ported over to .NET using [PeachPie](https://www.peachpie.io/) as a fun little experiment.
 
 ## Build Status
 
