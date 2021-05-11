@@ -2,18 +2,18 @@ name: .NET Core
 
 on:
     push:
-        branches: [master]
+        branches: [master, main]
     pull_request:
-        branches: [master]
+        branches: [master, main]
     schedule:
-    - cron: "0 0 * * 0"
+        - cron: "0 0 * * 0"
 
 jobs:
     build:
         runs-on: ${{ matrix.os }}
         strategy:
             matrix:
-                dotnet: ["3.1.302", "3.1.401"]
+                dotnet: ["3.1.x", "5.x"]
                 os: [ubuntu-latest, windows-latest, macOS-latest]
 
         steps:
