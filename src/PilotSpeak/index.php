@@ -60,7 +60,7 @@
         $totalcomboformatted = number_format($totalcombo);
         $wordbank = count($descriptor) + count($time) + count($location_noun1) + count($buzzword1);
         $wordbankformatted = number_format($wordbank);?>
-      <p><small>So far, <mark><strong><?php echo $yes ?></strong></mark> phrases were generated using this app. Application made in love by <a href="https://twitter.com/DrRaccoon">@DrRaccoon</a> for <a href="https://twitter.com/FlyinFox53">@FlyinFox53</a> and ported to .NET by <a href="https://twitter.com/tonyt1ns">@tonyt1ns</a>.
+        <p><small>So far, <mark><strong><?php echo $yes ?></strong></mark> phrases were generated using this app. Application made in love by <a href="https://twitter.com/DrRaccoon">@DrRaccoon</a> for <a href="https://twitter.com/FlyinFox53">@FlyinFox53</a> and ported to .NET by <a href="https://twitter.com/tonyt1ns">@tonyt1ns</a>.
       Like what I make? <a href="https://ko-fi.com/drraccoon"><i class="fa-solid fa-cup-togo"></i> Buy me a coffee</a>!<br>
         There are currenly <mark><? echo $wordbankformatted; ?></mark> words, making <mark><? echo $totalcomboformatted; ?></mark> total combinations. Want to contribute more phases and words? Join this <a href="https://t.me/PilotSpeak">telegram group</a>. Last updated: <mark><? echo "".date("F d Y.",filemtime("wordbank.json")); ?></mark></small></p>
         <center><p>Accidentally made in <i class="fab fa-php"></i>

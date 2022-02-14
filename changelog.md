@@ -9,6 +9,8 @@ PilotSpeak.NET now targets .NET 6.0!
 - No longer on PeachPie SDK preview!
 - Simplified project names
 
+=======
+
 ## 0.1.100
 
 - Added Docker support
