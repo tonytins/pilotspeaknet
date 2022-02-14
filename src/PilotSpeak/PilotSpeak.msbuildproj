@@ -2,7 +2,6 @@
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <AssemblyName>Raccoony.PilotSpeakGenerator</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="**/*.php;**/*.phar" />
