@@ -2,13 +2,13 @@
 
 [![GitHub license](https://img.shields.io/github/license/tonytins/pilotspeaknet)](https://github.com/tonytins/pilotspeaknet/blob/master/LICENSE)
 
-Created by Shawn McHenry, Pilot Speak is a phrase generator for talking like a pilot. This was ported over to .NET using [PeachPie](https://www.peachpie.io/) as a fun little experiment.
+Created by [Shawn McHenry](https://github.com/drraccoony), Pilot Speak is a phrase generator for talking like a pilot. It is a [direct port](https://github.com/drraccoony/PilotSpeakGenerator) of the original to .NET using [PeachPie](https://www.peachpie.io/) as a fun little experiment.
 
 ## Build Status
 
 | Service   | Status                                                                                                                          |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Github    | ![.NET Core](https://github.com/tonytins/pilotspeaknet/workflows/.NET%20Core/badge.svg)                                         |
+| Github    | ![.NET](https://github.com/tonytins/pilotspeaknet/workflows/.NET/badge.svg)                                                     |
 | Travis CI | [![Build Status](https://travis-ci.org/tonytins/pilotspeaknet.svg?branch=master)](https://travis-ci.org/tonytins/pilotspeaknet) |
 
 ## Phrase examples
@@ -29,7 +29,7 @@ A live version of this project can be found @ https://drraccoon.me/pilot/
 
 ### Prerequisites
 
-* .NET Core 3.1 SDK
+* .NET 6.0 SDK
 * PeachPie extension for [Visual Studio](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vs) or [VS Code](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vscode) (Optional)
 
 ## Authors

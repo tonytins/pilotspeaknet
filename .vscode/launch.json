@@ -10,9 +10,9 @@
       "request": "launch",
       "preLaunchTask": "build",
       // If you have changed target frameworks, make sure to update the program path.
-      "program": "${workspaceFolder}/src/Raccoony.PilotSpeak.Server/bin/Debug/netcoreapp3.1/pilotspeak.dll",
+      "program": "${workspaceFolder}/src/PilotSpeak.Server/bin/Debug/net6.0/PilotSpeak.Server.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/src/Raccoony.PilotSpeak.Server",
+      "cwd": "${workspaceFolder}/src/PilotSpeak.Server",
       "stopAtEntry": false,
       // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
       "serverReadyAction": {
@@ -29,8 +29,7 @@
     {
       "name": ".NET Core Attach",
       "type": "coreclr",
-      "request": "attach",
-      "processId": "${command:pickProcess}"
+      "request": "attach"
     }
   ]
 }
