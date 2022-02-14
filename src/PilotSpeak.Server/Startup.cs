@@ -1,39 +1,32 @@
-using System;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+namespace PilotSpeak.Server;
 
-namespace Raccoony.PilotSpeak.Server
+class Startup
 {
-    class Startup
+    public void ConfigureServices(IServiceCollection services)
     {
-        public void ConfigureServices(IServiceCollection services)
+        // Adds a default in-memory implementation of IDistributedCache.
+        services.AddDistributedMemoryCache();
+
+        services.AddSession(opt =>
         {
-            // Adds a default in-memory implementation of IDistributedCache.
-            services.AddDistributedMemoryCache();
+            opt.IdleTimeout = TimeSpan.FromMinutes(30);
+            opt.Cookie.HttpOnly = true;
+        });
 
-            services.AddSession(options =>
-            {
-                options.IdleTimeout = TimeSpan.FromMinutes(30);
-                options.Cookie.HttpOnly = true;
-            });
-
-            services.AddPhp(options =>
-            {
-
-            });
-        }
-
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        services.AddPhp(opt =>
         {
-            if (env.IsDevelopment())
-                app.UseDeveloperExceptionPage();
 
-            app.UseSession();
-            app.UsePhp();
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
-        }
+        });
+    }
+
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    {
+        if (env.IsDevelopment())
+            app.UseDeveloperExceptionPage();
+
+        app.UseSession();
+        app.UsePhp();
+        app.UseDefaultFiles();
+        app.UseStaticFiles();
     }
 }

@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.0.100
+
+PilotSpeak.NET now targets .NET 6.0!
+
+- Removed a lot of boilerplate code that is no longer necessary
+- Statements from the ``Main()`` method have been moved to the top-level
+- No longer on PeachPie SDK preview!
+- Simplified project names
+
+=======
+
 ## 0.1.100
 
 - Added Docker support
