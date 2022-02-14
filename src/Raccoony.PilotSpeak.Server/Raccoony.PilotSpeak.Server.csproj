@@ -4,6 +4,7 @@
         <OutputType>Exe</OutputType>
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <AssemblyName>pilotspeak</AssemblyName>
+        <Version>0.1.100</Version>
         <UserSecretsId>283754b1-fd11-42e1-b958-1909cef67281</UserSecretsId>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
